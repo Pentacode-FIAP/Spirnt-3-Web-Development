@@ -60,6 +60,12 @@ Para visualizar localmente a versão gerada:
 npm run preview
 ```
 
+## Deploy na Vercel
+
+Acesse nosso projeto no link abaixo:
+
+https://sprint-3-web-development-nine.vercel.app/
+
 ## Uso de IA no projeto
 
-A Inteligência Artificial, via API do Google Gemini, é usada para extrair texto de fotos de anotações (OCR), gerar resumos organizados a partir das imagens, criar exercícios com diferentes níveis de dificuldade e responder às perguntas no chat de estudos. A chave de acesso é lida pela variável de ambiente `VITE_GEMINI_API_KEY`; por isso, ela não deve ser versionada nem compartilhada publicamente.
+A Inteligência Artificial, via API do Google Gemini, é usada para extrair texto de fotos de anotações (OCR), gerar resumos organizados a partir das imagens, criar exercícios com diferentes níveis de dificuldade e responder às perguntas no chat de estudos.
