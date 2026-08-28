@@ -1,16 +1,65 @@
-# React + Vite
+# JOVI CAM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O novo ecossistema JOVI que integra canera e o app de estuddos para apoiar a rotina de estudos. O projeto permite registrar matérias, anotações, fotos e eventos, além de concentrar resumos, exercícios e um chat de apoio em uma única interface.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Captura e organização de fotos de anotações e conteúdos de estudo.
+- Cadastro de matérias, anotações e eventos no calendário.
+- Galeria para consultar o material salvo.
+- Criação de resumos e exercícios a partir do conteúdo estudado.
+- Chat para tirar dúvidas sobre os materiais registrados.
+- Persistência dos dados no armazenamento local do navegador.
 
-## React Compiler
+## Requisitos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Node.js](https://nodejs.org/) 18 ou superior.
+- npm (instalado junto ao Node.js).
+- Uma chave da API do Google Gemini para utilizar os recursos de IA.
 
-## Expanding the ESLint configuration
+## Como rodar o projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone o repositório e acesse a pasta do projeto:
+
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   cd Spirnt-3-Web-Development
+   ```
+
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+3. Crie um arquivo chamado `.env` na raiz do projeto e adicione sua chave do Gemini:
+
+   ```env
+   VITE_GEMINI_API_KEY=sua_chave_aqui
+   ```
+
+4. Inicie o ambiente de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Abra no navegador a URL exibida pelo Vite — normalmente `http://localhost:5173`.
+
+## Outros comandos
+
+Para gerar a versão de produção:
+
+```bash
+npm run build
+```
+
+Para visualizar localmente a versão gerada:
+
+```bash
+npm run preview
+```
+
+## Uso de IA no projeto
+
+A Inteligência Artificial, via API do Google Gemini, é usada para extrair texto de fotos de anotações (OCR), gerar resumos organizados a partir das imagens, criar exercícios com diferentes níveis de dificuldade e responder às perguntas no chat de estudos. A chave de acesso é lida pela variável de ambiente `VITE_GEMINI_API_KEY`; por isso, ela não deve ser versionada nem compartilhada publicamente.
