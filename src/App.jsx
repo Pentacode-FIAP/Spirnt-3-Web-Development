@@ -1,10 +1,10 @@
 import React from 'react'
 
-const App = () => {
+export default function App() {
   return (
-    <>
-    </>
-  )
+    <div className="phone-frame">
+      <div className="phone-notch" />
+    </div>
+  );
 }
 
-export default App
